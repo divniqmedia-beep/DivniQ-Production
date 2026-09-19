@@ -54,7 +54,7 @@ export default function HeroSection() {
 
       {/* Noise/grain — tile small, never stretch (Lyniq-style) */}
       <div
-        className="pointer-events-none absolute inset-0 z-[1] bg-repeat bg-[length:120px_120px] opacity-[0.14] mix-blend-overlay"
+        className="pointer-events-none absolute inset-0 z-[1] bg-repeat bg-[length:700px_700px]  mix-blend-overlay"
         aria-hidden="true"
         style={{
           backgroundImage: "url(/assets/hero/hero-gradient.avif)",
