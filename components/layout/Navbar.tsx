@@ -7,13 +7,20 @@ import { AnimatePresence, motion } from "motion/react";
 import { ChevronDown, Menu, X } from "lucide-react";
 
 import { NavSidebar } from "@/components/layout/NavSidebar";
-import { capabilitiesGrid } from "@/data/mockData";
 
 const parentItemClass =
   "flex w-full items-center justify-between gap-3 px-4 py-3 text-sm font-bold tracking-widest uppercase transition-all duration-300";
 const parentIdleClass = "text-white/80 hover:bg-white/10 hover:text-white";
-const childItemClass =
-  "block px-4 py-2 text-[14px] font-semibold tracking-wider uppercase text-white/60 transition-colors duration-300 hover:text-white";
+
+const NICHE_ITEMS = [
+  { label: "Media", href: "#" },
+  { label: "Creative", href: "#" },
+  { label: "Technology", href: "#" },
+  { label: "Finance", href: "#" },
+  { label: "Events", href: "#" },
+  { label: "Productions", href: "#" },
+  { label: "Sales", href: "#" },
+] as const;
 
 const NAVBAR_HEIGHT_TOP = "7.5rem";
 const NAVBAR_HEIGHT_SCROLLED = "4.5rem";
@@ -107,7 +114,9 @@ export default function Navbar() {
               }
         }
       >
-        <div className="grid h-full w-full max-w-full grid-cols-3 items-center px-4 md:px-8 lg:px-16">
+        {/* Events placement: grid-cols-3 + lg:px-22 */}
+        <div className="grid h-full w-full max-w-full grid-cols-3 items-center px-4 md:px-8 lg:px-[5.5rem]">
+          {/* Left — menu */}
           <div className="flex h-full min-w-0 items-center gap-4 justify-self-start">
             <button
               type="button"
@@ -135,6 +144,7 @@ export default function Navbar() {
             </button>
           </div>
 
+          {/* Center — dual logo fade (Productions assets) */}
           <div className="flex h-full min-w-0 items-center justify-center justify-self-center">
             <Link
               href="/"
@@ -165,6 +175,7 @@ export default function Navbar() {
             </Link>
           </div>
 
+          {/* Right — niches + contact */}
           <div className="flex h-full min-w-0 items-center justify-self-end">
             <div ref={nicheRef} className="relative flex items-center gap-1 sm:gap-3 md:gap-4">
               <button
@@ -202,30 +213,27 @@ export default function Navbar() {
                 {nicheOpen ? (
                   <motion.div
                     role="menu"
-                    aria-label="Capabilities"
+                    aria-label="Niches"
                     initial={{ opacity: 0, y: -8, scale: 0.98 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: -8, scale: 0.98 }}
                     transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-                    className="absolute top-[calc(100%+0.75rem)] right-0 z-[110] max-h-[70vh] w-[calc(100vw-2rem)] min-w-[208px] overflow-y-auto rounded-2xl border border-white/20 py-2 shadow-[0_20px_50px_rgba(0,0,0,0.35)] sm:w-auto sm:min-w-[260px] sm:overflow-hidden"
+                    className="absolute top-[calc(100%+0.75rem)] right-0 z-[110] max-h-[70vh] w-[calc(100vw-2rem)] min-w-[208px] overflow-y-auto rounded-2xl border border-white/20 py-2 shadow-[0_20px_50px_rgba(0,0,0,0.35)] sm:w-auto sm:min-w-[232px] sm:overflow-hidden"
                     style={{
                       background: "rgba(12, 12, 14, 0.55)",
                       backdropFilter: "blur(28px) saturate(160%)",
                       WebkitBackdropFilter: "blur(28px) saturate(160%)",
                     }}
                   >
-                    <p className={`${parentItemClass} ${parentIdleClass} pointer-events-none opacity-60`}>
-                      Capabilities
-                    </p>
-                    {capabilitiesGrid.map((item) => (
+                    {NICHE_ITEMS.map((item) => (
                       <Link
-                        key={item.id}
+                        key={item.label}
                         href={item.href}
                         role="menuitem"
-                        className={childItemClass}
+                        className={`${parentItemClass} ${parentIdleClass}`}
                         onClick={() => setNicheOpen(false)}
                       >
-                        {item.title}
+                        {item.label}
                       </Link>
                     ))}
                   </motion.div>

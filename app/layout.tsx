@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   title: "DIVNIQ PRODUCTIONS | Where Stories Take Flight",
   description:
     "Divniq Productions is a cinematic creative studio crafting brand films, motion, and visual stories that take flight.",
+  icons: {
+    icon: [{ url: "/assets/favicon.jpeg", type: "image/jpeg" }],
+  },
 };
 
 export default function RootLayout({

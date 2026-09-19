@@ -1039,7 +1039,7 @@ export const portfolioWork: PortfolioItem[] = [
     description:
       "An origin film for the studio — identity, craft, and the people behind the frame.",
     thumbnail:
-      "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1733849262485-8e723a26ccc0?q=80&w=1600&auto=format&fit=crop",
   },
   {
     id: "brand-film-teaser",
@@ -1052,7 +1052,7 @@ export const portfolioWork: PortfolioItem[] = [
     description:
       "A compressed narrative cut designed to land in the first seconds and leave a mark.",
     thumbnail:
-      "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1775558995369-83637e1d5e69?q=80&w=1600&auto=format&fit=crop",
   },
   {
     id: "luxury-walkthrough",
@@ -1065,7 +1065,7 @@ export const portfolioWork: PortfolioItem[] = [
     description:
       "A paced walkthrough where light, material, and silence do the selling.",
     thumbnail:
-      "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1643376452350-97eadd2c417f?q=80&w=1600&auto=format&fit=crop",
   },
   {
     id: "nature-cut",
@@ -1078,7 +1078,7 @@ export const portfolioWork: PortfolioItem[] = [
     description:
       "Landscape and texture as mood — a quiet film built on observation rather than exposition.",
     thumbnail:
-      "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1510382684496-dda106e3f86a?q=80&w=1600&auto=format&fit=crop",
   },
   {
     id: "hotel-preet",
@@ -1091,7 +1091,7 @@ export const portfolioWork: PortfolioItem[] = [
     description:
       "A hospitality portrait that places the guest inside the atmosphere of the house.",
     thumbnail:
-      "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1741487433406-d0fd4d788fb4?q=80&w=1600&auto=format&fit=crop",
   },
   {
     id: "product-still-life",
